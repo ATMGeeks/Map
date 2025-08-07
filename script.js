@@ -223,7 +223,7 @@ function initMapboxGLJS() {
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl,
       types: "address, postcode, place, region, poi", // address, city?, zip
-      countries: "US, CA",
+      countries: "US, CA", //Add Country Codes to show more countries
       clearAndBlurOnEsc: true,
       autocomplete: false,
       placeholder: "Enter your address",
@@ -810,7 +810,7 @@ function initMapboxJS() {
     });
     geocoder.query({
       types: "address,postcode,place,region,poi",
-      countries: "US, CA",
+      countries: "US, CA",  //Add Country Codes to show more countries
       clearAndBlurOnEsc: true,
       placeholder: "Enter your address",
       marker: {
