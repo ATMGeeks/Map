@@ -223,7 +223,7 @@ function initMapboxGLJS() {
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl,
       types: "address, postcode, place, region, poi", // address, city?, zip
-      countries: "US",
+      countries: "US, CA",
       clearAndBlurOnEsc: true,
       autocomplete: false,
       placeholder: "Enter your address",
