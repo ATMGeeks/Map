@@ -810,7 +810,7 @@ function initMapboxJS() {
     });
     geocoder.query({
       types: "address,postcode,place,region,poi",
-      countries: "US",
+      countries: "US, CA",
       clearAndBlurOnEsc: true,
       placeholder: "Enter your address",
       marker: {
