@@ -51,13 +51,13 @@ function initMapboxGLJS() {
   let smallMap = 0;
   if (mqLarge.matches) {
     map.setZoom(4.2); //set map zoom level for largest desktop size 1 is smallest number
-    largestMap = 6;
+    largestMap = 7;
   } else if (mqSmall.matches) {
     map.setZoom(3.5); //set map zoom level for medium desktop size
-    mediumMap = 5;
+    mediumMap = 6;
   } else {
     map.setZoom(2.9); //set map zoom level for mobile size
-    smallMap = 4;
+    smallMap = 5;
   }
 
 
