@@ -42,24 +42,24 @@ function initMapboxGLJS() {
   map.addControl(new mapboxgl.NavigationControl());
 
   /**
-   /**
- * Set appropriate zoom levels for different screen sizes
- * and configure search result zoom limits
- */
-const mqLarge = window.matchMedia("(min-width: 1440px)");
-const mqSmall = window.matchMedia("(min-width: 480px)");
+    * Adjust zoom of map for mobile and desktop
+   */
+  let mqLarge = window.matchMedia("(min-width: 1440px)");
+  let mqSmall = window.matchMedia("(min-width: 480px)");
+  let largestMap = 0;
+  let mediumMap = 0;
+  let smallMap = 0;
+  if (mqLarge.matches) {
+    map.setZoom(4.2); //set map zoom level for largest desktop size 1 is smallest number
+    largestMap = 6;
+  } else if (mqSmall.matches) {
+    map.setZoom(3.5); //set map zoom level for medium desktop size
+    mediumMap = 5;
+  } else {
+    map.setZoom(2.9); //set map zoom level for mobile size
+    smallMap = 4;
+  }
 
-// Set initial zoom and search zoom limits
-if (mqLarge.matches) {
-  map.setZoom(4);
-  map.searchZoomLimit = 9;  // Max zoom when searching
-} else if (mqSmall.matches) {
-  map.setZoom(3.5);
-  map.searchZoomLimit = 8;
-} else {
-  map.setZoom(3);
-  map.searchZoomLimit = 7;
-}
 
   /**
    * Wait for data to load on page via CMSNEST
